@@ -1,0 +1,138 @@
+<history>
+<active_lang>en</active_lang>
+<paused>False</paused>
+<session>5c770e3197e4fe763423ee7c392c25d1</session>
+<restart_req>False</restart_req>
+<power_options>True</power_options>
+-
+<slots>
+-
+<slot>
+<action_line/>
+<show_details>True</show_details>
+-
+<script_log>
+Processing MKV Moveie
+Processing Single MKV...
+Easy A (2010) Moved
+Folder was deleted
+Updating XBMC
+Connecting to XBMC...
+</script_log>
+<meta>None</meta>
+<fail_message/>
+<loaded>False</loaded>
+<id>6394</id>
+<size>4.5 GB</size>
+<category>movies</category>
+<pp>D</pp>
+<retry>0</retry>
+<completeness>0</completeness>
+<script>Movies.exe</script>
+<nzb_name>Easy A 2010 720p BluRay x264 METiS.nzb</nzb_name>
+<download_time>2619</download_time>
+<storage>D:\shares\Movies\Easy A (2010)</storage>
+<status>Completed</status>
+<script_line>Connecting to XBMC...</script_line>
+<completed>1291590150</completed>
+<nzo_id>SABnzbd_nzo_1t3he4</nzo_id>
+<downloaded>4846275919</downloaded>
+<report/>
+-
+<path>
+D:\SABnzbd\downloading\Easy A 2010 720p BluRay x264 METiS
+</path>
+<postproc_time>2561</postproc_time>
+<name>Easy A (2010)</name>
+<url/>
+<bytes>4846275919</bytes>
+<url_info/>
+-
+<stage_log>
+-
+<slot>
+<name>Download</name>
+-
+<actions>
+-
+<item>
+Downloaded in 43 minutes 39 seconds at an average of 1.8 MB/s
+</item>
+</actions>
+</slot>
+-
+<slot>
+<name>Unpack</name>
+-
+<actions>
+-
+<item>
+[metis-easya-720p] Unpacked 1 files/folders in 25 minutes 24 seconds
+</item>
+</actions>
+</slot>
+-
+<slot>
+<name>Script</name>
+-
+<actions>
+-
+<item>
+Connecting to XBMC... <a href="./scriptlog?name=SABnzbd_nzo_1t3he4">(More)</a>
+</item>
+</actions>
+</slot>
+</stage_log>
+</slot>
+-
+</slots>
+<speed>0  </speed>
+<helpuri>http://wiki.sabnzbd.org/</helpuri>
+<size>0 B</size>
+<uptime>18d</uptime>
+<total_size>5.4 TB</total_size>
+<month_size>31.8 GB</month_size>
+<week_size>45.5 GB</week_size>
+<version>0.6.0Alpha6</version>
+<new_rel_url>http://files.sabnzbd.org/private/0.6.0Alpha7/</new_rel_url>
+<diskspacetotal2>259.45</diskspacetotal2>
+<color_scheme/>
+<diskspacetotal1>259.45</diskspacetotal1>
+<nt>True</nt>
+<status>Idle</status>
+-
+<last_warning>
+2010-12-05 14:55:26,654
+ERROR
+[05/Dec/2010:14:55:26]  Traceback (most recent call last):
+  File "cherrypy\_cpwsgi.pyo", line 79, in setapp
+  File "cherrypy\_cpwsgi.pyo", line 219, in get_response
+  File "cherrypy\_cprequest.pyo", line 579, in run
+TimeoutError
+</last_warning>
+<have_warnings>3</have_warnings>
+<cache_art>0</cache_art>
+<sizeleft>0 B</sizeleft>
+<finishaction>None</finishaction>
+<paused_all>False</paused_all>
+<cache_size>0 B</cache_size>
+<new_release>0.6.0Alpha7</new_release>
+<pause_int>0</pause_int>
+<mbleft>0.00</mbleft>
+<diskspace1>885.14</diskspace1>
+<darwin>False</darwin>
+<timeleft>0:00:00</timeleft>
+<mb>0.00</mb>
+<noofslots>6322</noofslots>
+<eta>unknown</eta>
+<nzb_quota/>
+<loadavg/>
+<cache_max>157286400</cache_max>
+<kbpersec>0.00</kbpersec>
+<speedlimit/>
+-
+<webdir>
+C:\Program Files\SABnzbd\interfaces\Plush\templates
+</webdir>
+<diskspace2>885.14</diskspace2>
+</history>

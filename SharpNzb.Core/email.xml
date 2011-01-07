@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <!--Use the two following lines to set the priority-->
+  <X-Priority>5</X-Priority>
+  <X-MS-Priority>5</X-MS-Priority>
+  
+  <!--What will the subject contain?-->
+  <subject></subject>
+  <body>
+    Testing
+    Multi-Line
+    String
+    in
+    xml
+  </body>
+  
+</email>

@@ -1,0 +1,2 @@
+http://localhost:47754/api?mode=addurl&name=http://nzbs.org/index.php?action=getnzb%26nzbid=325624%26i=9695%26h=92653d4053a322e123dbbb3da887c5c5&cat=tv&priority=1&apikey=5c770e3197e4fe763423ee7c392c25d1&ma_username=admin&ma_password=myPass1
+http://localhost:47754/api?mode=addurl&name=http://nzbmatrix.com/api-nzb-download.php?id=682573%26username=markus101%26apikey=23469df9e8d921a3e98d75ca08056f8a

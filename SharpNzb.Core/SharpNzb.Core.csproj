@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FF514EC-7480-4103-A17A-328016B1AA7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpNzb.Core</RootNamespace>
+    <AssemblyName>SharpNzb.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptioneer.WindowsFormsClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Exceptioneer.WindowsFormsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.1.0.76, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CentralDispatch.cs" />
+    <Compile Include="Helper\Crc32Helper.cs" />
+    <Compile Include="Helper\FileSizeFormatHelper.cs" />
+    <Compile Include="Instrumentation\ExceptioneerTarget.cs" />
+    <Compile Include="Instrumentation\ILogProvider.cs" />
+    <Compile Include="Instrumentation\Log.cs" />
+    <Compile Include="Instrumentation\LogConfiguration.cs" />
+    <Compile Include="Instrumentation\LogLevel.cs" />
+    <Compile Include="Instrumentation\LogProvider.cs" />
+    <Compile Include="Instrumentation\NlogWriter.cs" />
+    <Compile Include="Instrumentation\SubsonicTarget.cs" />
+    <Compile Include="Model\ConnectionModel.cs" />
+    <Compile Include="Model\Notification\BasicNotification.cs" />
+    <Compile Include="Model\Notification\BasicNotificationType.cs" />
+    <Compile Include="Model\Notification\ProgressNotification.cs" />
+    <Compile Include="Model\Notification\ProgressNotificationStatus.cs" />
+    <Compile Include="Model\Nzb\ImportType.cs" />
+    <Compile Include="Model\Nzb\NzbFileModel.cs" />
+    <Compile Include="Model\Nzb\NzbImportModel.cs" />
+    <Compile Include="Model\Nzb\NzbModel.cs" />
+    <Compile Include="Model\Nzb\NzbSegmentModel.cs" />
+    <Compile Include="Model\Nzb\PostProcessing.cs" />
+    <Compile Include="Model\Nzb\Priority.cs" />
+    <Compile Include="Model\Nzb\Status.cs" />
+    <Compile Include="Model\TvShowParseModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CategoryProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ConfigProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\DecompressProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\DiskProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\EmailProvider.cs" />
+    <Compile Include="Providers\FilenameParseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\HistoryProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\HttpProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ICategoryProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IConfigProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IDecompressProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IDiskProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IEmailProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IFilenameParseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IHistoryProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IHttpProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INntpConnectionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INntpProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INotificationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INzbImportProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INzbParseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\INzbQueueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IParProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IPreQueueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IScriptProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IServerProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ISortingProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IXmlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\IYencProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NntpConnectionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NntpProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NotificationProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NzbImportProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NzbParseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\NzbQueueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ParProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\PreQueueProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ScriptProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\ServerProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\XmlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Providers\YencProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\Category.cs" />
+    <Compile Include="Repository\Config.cs" />
+    <Compile Include="Repository\History.cs" />
+    <Compile Include="Repository\Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="email.xml" />
+    <Content Include="Libraries\Castle.Core.dll" />
+    <Content Include="Libraries\Castle.Core.pdb" />
+    <Content Include="Libraries\Castle.Core.xml" />
+    <Content Include="Libraries\Exceptioneer.WindowsFormsClient.dll" />
+    <Content Include="Libraries\Ninject.dll" />
+    <Content Include="Libraries\Ninject.xml" />
+    <Content Include="Libraries\NLog.dll" />
+    <Content Include="Libraries\NLog.Extended.dll" />
+    <Content Include="Libraries\NLog.Extended.xml" />
+    <Content Include="Libraries\NLog.pdb" />
+    <Content Include="Libraries\NLog.xml" />
+    <Content Include="Libraries\SubSonic.Core.dll" />
+    <Content Include="Libraries\SubSonic.Core.pdb" />
+    <Content Include="Libraries\SubSonic.Core.XML" />
+    <Content Include="Libraries\System.Data.SQLite.dll" />
+    <Content Include="Libraries\System.Data.SQLite.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libraries\nlog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

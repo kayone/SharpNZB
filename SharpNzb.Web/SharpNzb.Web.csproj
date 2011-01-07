@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F655E3FA-F425-44F7-8F76-53B25DFE1347}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpNzb.Web</RootNamespace>
+    <AssemblyName>SharpNzb.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcContrib, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.1.0.76, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharpNzb.Core\Libraries\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharpNzb.Core\Libraries\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharpNzb.Core\Libraries\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Mvc, Version=2010.2.825.235, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\NzbController.cs" />
+    <Compile Include="Controllers\SabnzbdController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\SabnzbdModels.cs" />
+    <Compile Include="Models\SettingsModels.cs" />
+    <Compile Include="Ninject.Web.Mvc\ControllerMissingBindingResolver.cs" />
+    <Compile Include="Ninject.Web.Mvc\FilterInjector.cs" />
+    <Compile Include="Ninject.Web.Mvc\IFilterInjector.cs" />
+    <Compile Include="Ninject.Web.Mvc\NinjectActionInvoker.cs" />
+    <Compile Include="Ninject.Web.Mvc\NinjectAsyncActionInvoker.cs" />
+    <Compile Include="Ninject.Web.Mvc\NinjectControllerFactory.cs" />
+    <Compile Include="Ninject.Web.Mvc\NinjectHttpApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Black\editor.png" />
+    <Content Include="Content\Black\loading.gif" />
+    <Content Include="Content\Black\sprite.png" />
+    <Content Include="Content\Black\treeview-line.png" />
+    <Content Include="Content\Black\treeview-nodes.png" />
+    <Content Include="Content\Default\editor.png" />
+    <Content Include="Content\Default\loading.gif" />
+    <Content Include="Content\Default\sprite.png" />
+    <Content Include="Content\Default\treeview-line.png" />
+    <Content Include="Content\Default\treeview-nodes.png" />
+    <Content Include="Content\Forest\editor.png" />
+    <Content Include="Content\Forest\loading.gif" />
+    <Content Include="Content\Forest\sprite.png" />
+    <Content Include="Content\Forest\treeview-line.png" />
+    <Content Include="Content\Forest\treeview-nodes.png" />
+    <Content Include="Content\Hay\editor.png" />
+    <Content Include="Content\Hay\loading.gif" />
+    <Content Include="Content\Hay\sprite.png" />
+    <Content Include="Content\Hay\treeview-line.png" />
+    <Content Include="Content\Hay\treeview-nodes.png" />
+    <Content Include="Content\Images\img01.jpg" />
+    <Content Include="Content\Images\img02.jpg" />
+    <Content Include="Content\Images\img03.jpg" />
+    <Content Include="Content\Images\img07.jpg" />
+    <Content Include="Content\Images\spin.gif" />
+    <Content Include="Content\jquery.jgrowl.css" />
+    <Content Include="Content\Libraries\Telerik.Web.Mvc.dll" />
+    <Content Include="Content\Libraries\Telerik.Web.Mvc.xml" />
+    <Content Include="Content\notibar.css" />
+    <Content Include="Content\Office2007\editor.png" />
+    <Content Include="Content\Office2007\loading.gif" />
+    <Content Include="Content\Office2007\sprite.png" />
+    <Content Include="Content\Office2007\treeview-line.png" />
+    <Content Include="Content\Office2007\treeview-nodes.png" />
+    <Content Include="Content\Outlook\editor.png" />
+    <Content Include="Content\Outlook\loading.gif" />
+    <Content Include="Content\Outlook\sprite.png" />
+    <Content Include="Content\Outlook\treeview-line.png" />
+    <Content Include="Content\Outlook\treeview-nodes.png" />
+    <Content Include="Content\Simple\editor.png" />
+    <Content Include="Content\Simple\loading.gif" />
+    <Content Include="Content\Simple\sprite.png" />
+    <Content Include="Content\Simple\treeview-line.png" />
+    <Content Include="Content\Simple\treeview-nodes.png" />
+    <Content Include="Content\Sitefinity\editor.png" />
+    <Content Include="Content\Sitefinity\loading.gif" />
+    <Content Include="Content\Sitefinity\sprite.png" />
+    <Content Include="Content\Sitefinity\treeview-line.png" />
+    <Content Include="Content\Sitefinity\treeview-nodes.png" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\Sunset\editor.png" />
+    <Content Include="Content\Sunset\loading.gif" />
+    <Content Include="Content\Sunset\sprite.png" />
+    <Content Include="Content\Sunset\treeview-line.png" />
+    <Content Include="Content\Sunset\treeview-nodes.png" />
+    <Content Include="Content\telerik.black.min.css" />
+    <Content Include="Content\telerik.common.min.css" />
+    <Content Include="Content\telerik.default.min.css" />
+    <Content Include="Content\telerik.forest.min.css" />
+    <Content Include="Content\telerik.hay.min.css" />
+    <Content Include="Content\telerik.office2007.min.css" />
+    <Content Include="Content\telerik.outlook.min.css" />
+    <Content Include="Content\telerik.simple.min.css" />
+    <Content Include="Content\telerik.sitefinity.min.css" />
+    <Content Include="Content\telerik.sunset.min.css" />
+    <Content Include="Content\telerik.telerik.min.css" />
+    <Content Include="Content\telerik.vista.min.css" />
+    <Content Include="Content\telerik.web20.min.css" />
+    <Content Include="Content\telerik.webblue.min.css" />
+    <Content Include="Content\telerik.windows7.min.css" />
+    <Content Include="Content\Telerik\editor.png" />
+    <Content Include="Content\Telerik\loading.gif" />
+    <Content Include="Content\Telerik\sprite.png" />
+    <Content Include="Content\Telerik\treeview-line.png" />
+    <Content Include="Content\Telerik\treeview-nodes.png" />
+    <Content Include="Content\Vista\editor.png" />
+    <Content Include="Content\Vista\loading.gif" />
+    <Content Include="Content\Vista\sprite.png" />
+    <Content Include="Content\Web20\editor.png" />
+    <Content Include="Content\Web20\loading.gif" />
+    <Content Include="Content\Web20\sprite.png" />
+    <Content Include="Content\Web20\treeview-line.png" />
+    <Content Include="Content\Web20\treeview-nodes.png" />
+    <Content Include="Content\WebBlue\editor.png" />
+    <Content Include="Content\WebBlue\loading.gif" />
+    <Content Include="Content\WebBlue\sprite.png" />
+    <Content Include="Content\WebBlue\treeview-line.png" />
+    <Content Include="Content\WebBlue\treeview-nodes.png" />
+    <Content Include="Content\Windows7\editor.png" />
+    <Content Include="Content\Windows7\loading.gif" />
+    <Content Include="Content\Windows7\sprite.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Libraries\MvcContrib.dll" />
+    <Content Include="Libraries\MvcContrib.XML" />
+    <Content Include="Libraries\Telerik.Web.Mvc.dll" />
+    <Content Include="Libraries\Telerik.Web.Mvc.xml" />
+    <Content Include="Scripts\2010.2.825\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\2010.2.825\jquery.validate.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.autocomplete.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.calendar.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.combobox.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.common.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.datepicker.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.draganddrop.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.editor.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.grid.editing.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.grid.filtering.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.grid.grouping.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.grid.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.grid.resizing.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.list.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.menu.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.panelbar.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.tabstrip.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.textbox.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.treeview.min.js" />
+    <Content Include="Scripts\2010.2.825\telerik.window.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="Scripts\jquery.jgrowl.js" />
+    <Content Include="Scripts\Notification.js" />
+    <Content Include="Views\Api\Index.aspx" />
+    <Content Include="Views\Log\Index.aspx" />
+    <Content Include="Views\Nzb\Index.aspx" />
+    <Content Include="Views\Sabnzbd\Index.aspx" />
+    <Content Include="Views\Settings\Index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpNzb.Core\SharpNzb.Core.csproj">
+      <Project>{5FF514EC-7480-4103-A17A-328016B1AA7F}</Project>
+      <Name>SharpNzb.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13061</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

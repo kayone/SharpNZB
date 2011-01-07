@@ -1,0 +1,7 @@
+--INntpProvider--
+Manages connections
+Total Speed of all connections
+Passes articles to nntp.dll
+Event trigged when connection has finished the article
+Event trigged when file is finished
+Event trigged when NZB is finished
